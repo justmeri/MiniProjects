@@ -1,0 +1,173 @@
+* {
+  font-family: "Lexend Deca", arial;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background-color: hsl(0, 0%, 95%);
+}
+
+/* Variables */
+
+:root {
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+}
+
+/* Basic Styling */
+
+.container .car-type {
+  font-family: "Big Shoulders Display", arial;
+  color: hsl(0, 0%, 95%);
+}
+
+.container .paragraph {
+  color: hsla(0, 0%, 100%, 0.75);
+}
+
+.container .learn-more-btn {
+  background-color: hsl(0, 0%, 95%);
+}
+
+/* All Styling */
+
+.container {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  display: flex;
+  border-radius: 20px !important;
+  height: 600px;
+  width: 50%;
+  margin: 140px auto;
+}
+
+.container .sedans {
+  background-color: var(--bright-orange);
+  border-radius: 10px 0 0 10px;
+}
+
+.container .sedans .learn-more-btn {
+  color: var(--bright-orange);
+}
+
+.container .sedans .learn-more-btn:hover {
+  background-color: var(--bright-orange);
+  color: hsla(0, 0%, 100%, 0.75);
+  border: 2px solid hsla(0, 0%, 100%, 0.75);
+}
+
+.container .suvs {
+  background-color: var(--dark-cyan);
+}
+
+.container .suvs .learn-more-btn {
+  color: var(--dark-cyan);
+}
+
+.container .suvs .learn-more-btn:hover {
+  background-color: var(--dark-cyan);
+  color: hsla(0, 0%, 100%, 0.75);
+  border: 2px solid hsla(0, 0%, 100%, 0.75);
+}
+
+.container .luxury {
+  background-color: var(--very-dark-cyan);
+  border-radius: 0 10px 10px 0;
+}
+
+.container .luxury .learn-more-btn {
+  color: var(--very-dark-cyan);
+}
+
+.container .luxury .learn-more-btn:hover {
+  background-color: var(--very-dark-cyan);
+  color: hsla(0, 0%, 100%, 0.75);
+  border: 2px solid hsla(0, 0%, 100%, 0.75);
+}
+
+/* All of the buttons, not just a specific one */
+.container .learn-more-btn {
+  padding: 18px;
+  border-radius: 50px;
+  width: 130px;
+  text-align: center;
+  cursor: pointer;
+  border: 2px solid hsla(0, 0%, 100%, 0.75);
+  transition: 200ms;
+}
+
+.container .car-section {
+  padding: 30px;
+}
+
+/* Mobile */
+
+@media (max-width: 700px) {
+  body {
+    overflow-x: hidden;
+  }
+  .container .sedans {
+    border-radius: 10px 10px 0 0;
+  }
+  .container .luxury {
+    border-radius: 0 0 10px 10px;
+  }
+  .car-section {
+    padding: 50px !important;
+    /* width: 300px; */
+  }
+  html body div.container {
+    flex-direction: column;
+    font-size: 20px !important;
+    margin: 100px 20px 100px 20px;
+    height: 93% !important;
+    width: 93% !important;
+  }
+
+  p {
+    font-size: 20px;
+    line-height: 1.5em;
+  }
+
+  .container .learn-more-btn {
+    margin-top: 10%;
+    font-size: 18px;
+  }
+
+  img {
+    scale: 1.3;
+    padding: 10px;
+  }
+
+  .car-section {
+    /* margin: 100px; */
+  }
+}
+
+/* Desktop */
+
+@media (min-width: 1440px) {
+  /*  */
+  .car-section {
+    padding: 50px !important;
+    width: 300px;
+  }
+  html body div.container {
+    font-size: 25px !important;
+  }
+
+  p {
+    font-size: 20px;
+  }
+
+  .container .learn-more-btn {
+    margin-top: 45%;
+    font-size: 18px;
+  }
+}
